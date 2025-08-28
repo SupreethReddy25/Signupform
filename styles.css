@@ -1,0 +1,155 @@
+:root{
+    --primary-bg: #030712;
+    --secondary-bg: #111827;
+    --glass-bg: rgba(17, 24, 39, 0.6);
+    --ego-cyan: #00FFFF;
+    --ego-red: #ff003c;
+    --text-primary: #F9FAFB;
+    --text-secondary: #9CA3AF;
+    --border-color: rgba(107, 114, 128, 0.3);
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Roboto Condensed', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: var(--font-body);
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url(Resources/bg1.png);
+    background-position: center;
+}
+.content{
+    --color-theme:#4169E1;
+    --valid-input-color:rgb(21, 97, 21);
+    --invalid-input:rgb(166, 2, 2);
+
+    display: flex;
+    flex-direction: column;
+    flex:1 1 55%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+    margin:auto;
+    padding: clamp(20px, 4vw, 50px);
+    overflow-y: auto;
+}
+
+.blue-lock-logo {
+    width: clamp(180px, 25vw, 250px);
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 15px var(--ego-cyan));
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+div.input > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+}
+div.input {
+    display: flex;
+    gap: clamp(0px, calc(5% + 5px), 50px);
+}
+fieldset{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(22, 44, 212, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;   
+    background-color: #ffffff;
+}
+fieldset input{
+    background-color: #e8e8e8;
+    padding: 10px 15px;
+    border: 1.5px solid #c4d8ff;
+    border-radius: 4px;
+    margin-right: 3ch;
+}
+fieldset input :user-invalid{
+    border-color:var(--invalid-input);
+    border-width: 5px;
+}
+fieldset input :user-valid{
+    border-color:var(--valid-input-color);
+    border-width: 5px;
+}
+fieldset input::placeholder{
+    color: rgb(188, 210, 255);
+}
+input:focus-visible{
+    outline: none;
+    border-color: rgb(0, 179, 255);
+}
+button{
+    transition: transform 0.07s ease;
+    background-color: var(--color-theme);
+    padding: 0.75em 2.25em;
+    color: whitesmoke;
+    filter:saturate(5);
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    margin: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.3);
+    background-color: rgba(220, 20, 27, 0.8);
+    color: rgb(0, 0, 0);
+    font-weight:900;
+    cursor:crosshair;
+}
+div.login{
+    margin-left: 40px;
+}
+.login>p{
+    font-size: 0.9em;
+}
+.login a{
+    color: var(--color-theme);
+    
+}
+.login a:hover{
+    filter: brightness(1.5);
+    filter:saturate(2);
+    font-weight: 700;
+    font-size: 1.1em;
+}
+form .form-heading{
+    font-size: 1.5rem;
+    color:#2e54c5;
+    font-weight: bold;
+}
+form label{
+    font-size: 0.8rem;
+    letter-spacing: 0.23ch;
+}
+.desc p{
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 0.1ch;
+}
+.desc{
+    font-size: 1.6rem;
+    font-style: oblique;
+    padding: 40px;
+    padding-bottom: 30px;
+    max-width: 70ch;
+    color:#0140ff
+}
+.desc p:hover{
+    color: rgb(2, 93, 185);
+    filter: saturate(2);
+}
